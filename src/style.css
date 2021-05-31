@@ -1,0 +1,46 @@
+.container {
+    margin: 25px;
+    max-width: 550px;
+    min-width: 550px;
+  }
+  footer {
+    text-align: center;
+  }
+  #current-city {
+    font-size: 48px;
+    margin: 20px 0px 0px 0px;
+  }
+  .current-condition {
+    font-size: 22px;
+  }
+  .current-details-precip-wind-hum {
+    padding-right: 0;
+    margin-top: 60px !important;
+  }
+  .current-weekday {
+    font-size: 20px;
+  }
+  .current-temp {
+    font-size: 60px;
+  }
+  .enter-a-city-textarea {
+    border: none;
+    max-width: 80%;
+  }
+  .enter-a-city-textarea-search-btn {
+    width: 7%;
+  }
+  .weather-forecast-title {
+    background: rgb(198, 198, 235);
+    min-width: 100%;
+  }
+  .upcoming-icon {
+    font-size: 50px;
+  }
+  .weekdays {
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    margin: 1px;
+  }
+  
