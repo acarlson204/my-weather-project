@@ -9,19 +9,18 @@
   #current-city {
     font-size: 48px;
     margin: 20px 0px 0px 0px;
+    background:rgb(105, 180, 230);
+    width: 100%;
   }
-  .current-condition {
-    font-size: 22px;
+  #current-details-condition-wind-humidity {
+    font-size: 23px;
   }
-  .current-details-precip-wind-hum {
-    padding-right: 0;
-    margin-top: 60px !important;
-  }
-  .current-weekday {
+
+  #date {
     font-size: 20px;
   }
   .current-temp {
-    font-size: 60px;
+    font-size: 68px;
   }
   .enter-a-city-textarea {
     border: none;
@@ -32,7 +31,8 @@
   }
   .weather-forecast-title {
     background: rgb(198, 198, 235);
-    min-width: 100%;
+    min-width: 105%;
+    padding: 0% !important;
   }
   .upcoming-icon {
     font-size: 50px;

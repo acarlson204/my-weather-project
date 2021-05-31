@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,99 +12,113 @@
     rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
     crossorigin="anonymous" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>Weather App Mock up</title>
 </head>
 
 <body>
   <div class="container">
-        <form class="row" id="search-form">
-          <div class="col-8">
-            <input class="form-control" id="enter-a-city-textarea" autofocus="on" autocomplete="off"
-              placeholder="Enter a city.." aria-label="default input example">
-          </div>
-          <div class="col-2">
-            <button type="button" id="enter-a-city-textarea-search-btn"
-              class="btn btn-info btn">Search</button></div><div class="col-2">
-              <button type="button" id="current-location-button" class="btn btn-info btn">Current</button>
-          </div>
-        </form>
+    <form class="row" id="search-form">
+      <div class="col-8">
+        <input class="form-control" id="enter-a-city-textarea" autofocus="on"
+          autocomplete="off" placeholder="Enter a city.."
+          aria-label="default input example">
+      </div>
+      <div class="col-2">
+        <button type="button" id="enter-a-city-textarea-search-btn"
+          class="btn btn-info btn">Search</button>
+      </div>
+      <div class="col-2">
+        <button type="button" id="current-location-button"
+          class="btn btn-info btn">Current</button>
+      </div>
+    </form>
+    <hr>
+    <div class="row">
+      <span id="current-city" class="col-4">Winnipeg, Mb</span>
+      <span id="date" class="col-12">Wednesday 2:34AM</span>
 
-      <p id="current-city">Winnipeg, Mb</p>
+      <div class="col-6">
+        <p class="current-temp">
+          <img src="media/moon.png" alt="Pic of moon and stars" width="100"
+            height="100"> <span id="temp">1</span>℃
+        </p>
+
+      </div>
+
+      <div id="current-details-condition-wind-humidity" class="col-6">
+        <p>
+          CURRENTLY: <span id="current-condition">Cloudy</span>
+        </p>
+        <p>
+          WIND: <span id="wind">3</span> km/hr
+        </p>
+        <p>
+          HUMIDITY: <span id="humidity">61</span>%
+        </p>
+      </div>
+
+      <hr>
       <div class="row">
-        <div class="col-7">
-          <p class="current-temp">
-            <img src="media/moon.png" alt="Pic of moon and stars" width="100"
-              height="100"> <span id="temp">1</span>℃
-          </p>
-          <p class="current-weekday last-updated" id="date">Wednesday 2:34AM</p>
+        <div class="weather-forecast-title">
+          5 DAY FORECAST
         </div>
-        <div class="col-5">
-          <p> 
-            Wind: <span id="wind">3</span> km/hr
-          </p>
-          <p>
-            Humidity: <span id="humidity">61</span>%
+      </div>
+      <div class="row">
+        <div class="col weekdays">
+          <p>Thursday
+          <div class="upcoming-icon"> <img src="media/sun-clouds.png"
+              alt="photo of sun and clouds"" width=" 50" height="50">
+          </div>12°/0°
+          <br>
+          💧5%
           </p>
         </div>
-        <hr>
-        <div class="row">
-            <div class="weather-forecast-title">
-            5 DAY FORECAST
-            </div>
+        <div class="col weekdays">
+          <p>Friday
+          <div class="upcoming-icon">
+            <img src="media/sun-clouds.png"
+              alt="photo of sun and clouds"" width=" 50" height="50">
+          </div> 12°/0° <br>
+          💧8%
+          </p>
         </div>
-        <div class="row">
-          <div class="col weekdays">
-            <p>Thursday
-            <div class="upcoming-icon"> <img src="media/sun-clouds.png"
-                alt="photo of sun and clouds"" width=" 50" height="50">
-            </div>12°/0°
-            <br>
-            💧5%
-            </p>
+        <div class="col weekdays">
+          <p>Saturday
+          <div class="upcoming-icon">
+            <img src="media/sun.png" alt="photo of sun"" width=" 50"
+              height="50">
+          </div>11°/0°<br>
+          💧7%
+          </p>
+        </div>
+        <div class="col weekdays">
+          <p>Sunday
+          <div class="upcoming-icon">
+            <img src="media/sun-clouds.png"
+              alt="photo of sun and clouds"" width=" 50" height="50">
           </div>
-          <div class="col weekdays">
-            <p>Friday
-            <div class="upcoming-icon">
-              <img src="media/sun-clouds.png" alt="photo of sun and clouds"" width="
-                50" height="50">
-            </div> 12°/0° <br>
-            💧8%
-            </p>
-          </div>
-          <div class="col weekdays">
-            <p>Saturday
-            <div class="upcoming-icon">
-              <img src="media/sun.png" alt="photo of sun"" width=" 50" height="50">
-            </div>11°/0°<br>
-            💧7%
-            </p>
-          </div>
-          <div class="col weekdays">
-            <p>Sunday
-            <div class="upcoming-icon">
-              <img src="media/sun-clouds.png" alt="photo of sun and clouds"" width="
-                50" height="50">
-            </div>
-            12°/1°<br>
-            💧5%
-            </p>
-          </div>
-          <div class="col weekdays">
-            <p>Monday
-            <div class="upcoming-icon"> <img src="media/sun-clouds.png" alt="photo of sun and clouds" width="50" height="50"></div>
-            16°/4°<br>
-            💧5%
-            </p>
-          </div>
+          12°/1°<br>
+          💧5%
+          </p>
+        </div>
+        <div class="col weekdays">
+          <p>Monday
+          <div class="upcoming-icon"> <img src="media/sun-clouds.png"
+              alt="photo of sun and clouds" width="50" height="50"></div>
+          16°/4°<br>
+          💧5%
+          </p>
         </div>
       </div>
     </div>
+  </div>
   <footer>
-    <a href="https://github.com/acarlson204/my-weather-project" target="_blank">Open source code</a> by acarlson204
+    <a href="https://github.com/acarlson204/my-weather-project"
+      target="_blank">Open source code</a> by acarlson204
   </footer>
-</div>
-  <script src="src/script.js"
-  ></script>
+  </div>
+  <script src="src/script.js"></script>
 </body>
+
 </html>

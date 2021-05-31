@@ -1,4 +1,4 @@
-function formatDate() {
+function formatDate(date) {
   let now = new Date();
   let weekdays = [
     "SUNDAY",
@@ -25,7 +25,7 @@ function formatDate() {
     "DECEMBER"
   ];
   let month = months[now.getMonth()];
-  let date = now.getDate();
+  let day = now.getDate();
   let year = now.getFullYear();
   let hours = now.getHours();
   if (hours < 10) {
@@ -35,7 +35,7 @@ function formatDate() {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${weekday} ${month} ${date}, ${year} ${hours}:${minutes}`;
+  return `${weekday} ${month} ${day}, ${year} ${hours}:${minutes}`;
 }
 
 function displayWeatherCondition(response) {
@@ -53,6 +53,7 @@ function searchCity(city) {
   let apiKey = "03ea91762285df0d5fb999b760075dea";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
 }
 
 function handleSubmit(event) {
@@ -64,7 +65,7 @@ function handleSubmit(event) {
 function searchLocation(position) {
   let apiKey = "03ea91762285df0d5fb999b760075dea";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-
+  console.log(apiUrl);
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
