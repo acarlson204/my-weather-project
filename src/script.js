@@ -43,11 +43,10 @@ function displayWeatherCondition(response) {
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-}
+  document.querySelector("#current-condition").innerHTML = response.data.weather[0].description;
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+ }
 
 function searchCity(city) {
   let apiKey = "03ea91762285df0d5fb999b760075dea";
@@ -96,4 +95,4 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Paris");
+searchCity("Winnipeg");
